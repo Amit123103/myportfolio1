@@ -110,7 +110,8 @@ const Chatbot = () => {
             setEmailForm({ name: '', message: '' });
         } catch (error) {
             console.error('EmailJS Error:', error);
-            setMessages(prev => [...prev, { type: 'bot', text: 'Oops! Could not send email. Make sure your EmailJS keys are correct.' }]);
+            const errMsg = error.text || error.message || 'Check keys';
+            setMessages(prev => [...prev, { type: 'bot', text: `Oops! Error: ${errMsg}` }]);
         } finally {
             setIsSending(false);
         }
