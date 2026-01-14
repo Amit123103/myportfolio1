@@ -36,7 +36,7 @@ const FeedbackSection = () => {
             setComment('');
         } catch (error) {
             console.error('EmailJS Error:', error);
-            setStatus('Failed to send feedback. Try again.');
+            setStatus(`Failed: ${error.text || error.message || 'Check keys'}`);
         }
     };
 

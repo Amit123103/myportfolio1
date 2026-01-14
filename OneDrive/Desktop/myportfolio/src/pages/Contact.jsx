@@ -28,7 +28,7 @@ const Contact = () => {
             setFormData({ name: '', email: '', message: '' });
         } catch (error) {
             console.error('EmailJS Error:', error);
-            setStatus('error');
+            setStatus(`error: ${error.text || error.message || 'Unknown error'}`);
         }
     };
 
@@ -111,7 +111,7 @@ const Contact = () => {
                             {status === 'sending' ? 'Sending...' : 'Send Message'}
                         </button>
                         {status === 'success' && <p className="success-msg">Message sent successfully!</p>}
-                        {status === 'error' && <p className="error-msg">Failed to send. Please try again.</p>}
+                        {status.startsWith('error') && <p className="error-msg">Failed: {status.split(': ')[1]}</p>}
                     </form>
                 </div>
             </div>
