@@ -1,0 +1,239 @@
+.home-container {
+    width: 100%;
+    /* Removed fixed height to allow scrolling */
+    text-align: center;
+}
+
+.hero-section {
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #fff, #8892b0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+
+.cta-button {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    transform: translateY(-5px);
+}
+
+/* About Section */
+.about-section {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    text-align: left;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--lightest-slate);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: var(--slate);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.about-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-card {
+    width: 200px;
+    height: 300px;
+    background: #222;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+}
+
+.tech-img-1 {
+    background-size: cover;
+    background-position: center;
+}
+
+.tech-img-2 {
+    background-size: cover;
+    background-position: center;
+    margin-top: 50px;
+    /* Offset effect */
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        padding: 80px 1rem 2rem;
+        /* Adjusted padding */
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* Statistics Section */
+.stats-section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stats-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--light-slate);
+}
+
+.stats-graph-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.stat-bar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stat-label {
+    width: 120px;
+    text-align: right;
+    color: var(--slate);
+    font-weight: bold;
+}
+
+.stat-bar-bg {
+    flex-grow: 1;
+    height: 20px;
+    background: rgba(17, 34, 64, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.stat-bar-fill {
+    height: 100%;
+    background: var(--green);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.stat-count {
+    color: #0a192f;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* Profiles Section */
+.profiles-section {
+    padding: 4rem 2rem;
+    background: rgba(17, 34, 64, 0.3);
+}
+
+.profiles-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--light-slate);
+}
+
+.profiles-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.profile-card {
+    background: var(--light-navy);
+    padding: 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    width: 250px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.profile-card:hover {
+    border-color: var(--green);
+    transform: translateY(-5px);
+}
+
+.profile-card h3 {
+    color: var(--green);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.profile-card p {
+    color: var(--slate);
+    font-size: 0.9rem;
+}
