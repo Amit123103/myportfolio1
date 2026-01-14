@@ -11,18 +11,17 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('sending');
-
         try {
             await emailjs.send(
-                'YOUR_SERVICE_ID', // Replace with your Service ID
-                'YOUR_TEMPLATE_ID', // Replace with your Template ID
+                'service_hgbss5n',
+                'template_7el8g1s',
                 {
                     from_name: formData.name,
                     from_email: formData.email,
                     message: formData.message,
                     to_name: 'Amit',
                 },
-                'YOUR_PUBLIC_KEY' // Replace with your Public Key
+                '0uaE9NgAzOusvs7Jp'
             );
 
             setStatus('success');

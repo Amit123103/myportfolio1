@@ -21,14 +21,14 @@ const FeedbackSection = () => {
 
         try {
             await emailjs.send(
-                'YOUR_SERVICE_ID',
-                'YOUR_TEMPLATE_ID',
+                'service_hgbss5n',
+                'template_7el8g1s',
                 {
                     rating: rating,
                     comment: comment,
                     from_name: 'Portfolio Visitor',
                 },
-                'YOUR_PUBLIC_KEY'
+                '0uaE9NgAzOusvs7Jp'
             );
 
             setStatus('Thank you for your feedback! 🚀');

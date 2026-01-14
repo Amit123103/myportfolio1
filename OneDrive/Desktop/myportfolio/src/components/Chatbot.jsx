@@ -95,14 +95,14 @@ const Chatbot = () => {
 
         try {
             await emailjs.send(
-                'YOUR_SERVICE_ID',
-                'YOUR_TEMPLATE_ID',
+                'service_hgbss5n',
+                'template_7el8g1s',
                 {
                     from_name: emailForm.name,
                     message: emailForm.message,
                     to_name: 'Amit',
                 },
-                'YOUR_PUBLIC_KEY'
+                '0uaE9NgAzOusvs7Jp'
             );
 
             setMessages(prev => [...prev, { type: 'bot', text: `Message sent successfully! Thanks ${emailForm.name}.` }]);
